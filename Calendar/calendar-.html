@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <table class="skinBody">
+        <thead>
+            <tr>
+                <th id="prev">&laquo;</th>　 　　　　　　　　　　　　               　　　　 <!--»を表示するための実態参照-->
+                <th id="title" colspan="5">2021/07</th> 　　　　　　　　　　　　　　　　     <!--５列を占有するため、colspan5を設定-->
+                <th id="next">&raquo;</th>
+            </tr>
+            <tr>
+                <th>日</th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th>土</th>
+            </tr>
+        </thead>
+
+        <tbody>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　      <!--tbody内にカレンダーを描画-->   
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id="today" colspan="7">今日に戻る</td>　　　　　　　　　　　　　　　     <!--７列を占有するためcolspan7を設定-->
+            </tr>
+        </tfoot>
+    </table>
+    <script src="js/main.js"></script>
+</body>
+<script type="text/javascript">                                   　　　　　　　　　　　　   //背景のアニメーション
+    $(function () {
+        var bgsc1 = 0;
+        var bgsc2 = 0;
+        setInterval(function () {
+            bgsc1 += -0.1;
+            bgsc2 += 0;
+            $(".skinBody").css("background-position", bgsc1 + "px " + bgsc2 + "px");
+        });
+    });
+</script>
+
+</html>

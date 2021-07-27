@@ -1,0 +1,65 @@
+@charset "UTF-8";
+body {
+    font-family: 'Courier New' , monospace;                                 /*等幅フォントを設定*/
+    font-size: 13px;                                                        /*文字は少し小さめに*/
+}
+
+table {
+    border-collapse: collapse;                                              /*テーブル内の隣接するセルのボーダーを重ねて表示*/
+    border: 2px solid #eee;                                               /*テーブル全体に境界線をつける*/
+}
+
+
+th,
+td {
+    padding: 16px;                                                          /*余白を調節*/
+    text-align: center;                                                     /*文字を中央揃え*/
+}
+
+tbody td:first-child{                                                       /*金曜日を赤色に*/
+    color: red;                                
+}
+
+tbody td:last-child{                                                        /*土曜日を赤色に*/
+    color: blue;
+}
+
+tfoot {
+    font-weight: bold;                                                      /*今日に戻るの部分を太字に*/
+}
+
+td.disabled {                                                               /*前月、翌月の日付を薄くする*/
+    opacity: 0.3;
+}
+
+td.today {                                                                  /*現在の日付を太字に*/
+    font-weight: bold;  
+}
+
+#prev,
+#next,
+#today {
+    cursor: pointer;                                                        /*カーソルを変えることでクリックできることをわかりやすく*/
+    user-select: none;                                                      /*テキストの選択を防ぐ*/
+    background-color: rgba(32, 8, 8, 0.211);
+  
+}
+#today:hover{                                   
+    color: rgb(31, 167, 4);
+}
+
+/**/
+#next:hover{                                    
+    color: rgb(255, 0, 0);                                                /*マウスインで文字色を変更*/
+}
+
+#prev:hover{
+    color: rgb(255, 0, 0);
+}
+
+.skinBody{                                                                  /*背景のアニメーション*/
+    background:#ffffff00 url("../images/neko_gifmagazine.gif") fixed  0 0;
+    } 
+
+
+    
